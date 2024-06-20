@@ -1,35 +1,24 @@
 import pandas as pd
-
 import random
-
 L = []
 for i in range(10000):
   a = random.randint(1,6)
   b = random.randint(1,6)
-
   L.append(a + b)
-
 len(L)
-
 L[:5]
-
 s = (pd.Series(L).value_counts()/pd.Series(L).value_counts().sum()).sort_index()
 
 import numpy as np
 np.cumsum(s)
-
 s.plot(kind='bar')
-
 np.cumsum(s).plot(kind='bar')
 
 """# Parametric Density Estimation"""
-
 import matplotlib.pyplot as plt
 import numpy as np
 from numpy.random import normal
-
 sample = normal(loc=50, scale=5,size=1000)
-
 sample.mean()
 
 # plot histogram to understand the distribution of data
